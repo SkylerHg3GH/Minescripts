@@ -1,5 +1,6 @@
 # minescript-js
 Minescript-js is a Minescript script that allows you to run Javascript scripts in Minecraft using interprocess communication.
+It is very limited but i personally want my settimeout and setinterval in python 
 
 ## Documentation
 ### `ensureConnection()`
@@ -70,3 +71,10 @@ Sets chat input.
 
 #### `Chat.close_chat_input()` / `Chat.close_ci()`
 Closes chat input.
+
+## Usage
+`\runjs <script name> <args>`
+
+## Requirements
+- NodeJS
+- Minescript (I only tested it for Minescript 5.0b10 Neoforge on win11 but it might work on other versions)
