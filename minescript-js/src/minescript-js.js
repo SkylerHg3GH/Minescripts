@@ -1,5 +1,6 @@
 const net = require('net');
 
+
 let client = null;
 let queue = [];
 let buffer = '';
