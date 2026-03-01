@@ -30,7 +30,7 @@ async def handle_client(reader, writer):
         addr = writer.get_extra_info('peername')
 
         while True:
-            data = await reader.readline()
+            data = await reader.read(16777216)
             if not data:
                 break
             message = data.decode().strip()
@@ -76,7 +76,7 @@ async def handle_client(reader, writer):
                 else:
                     writer.write(b'err')
                 await writer.drain()
-            elif cmd == 'chat_input':
+            elif cmd == 'set_chat_input':
                 if len(args) > 2:
                     writer.write(b'success')
                     m.set_chat_input(args[2], True)
@@ -187,7 +187,7 @@ async def handle_client(reader, writer):
 async def main():
     try:
         global server
-        server = await asyncio.start_server(handle_client, HOST, PORT)
+        server = await asyncio.start_server(handle_client, HOST, PORT, limit=16777216)
         addr = server.sockets[0].getsockname()
         threading.Thread(target=run_node, daemon=True).start()
 
