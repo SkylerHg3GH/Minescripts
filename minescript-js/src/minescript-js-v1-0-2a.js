@@ -1,6 +1,6 @@
 const net = require('net');
 
-const ver = 'v1.0.2'
+const ver = 'v1.0.2a'
 
 let client = null;
 let queue = [];
@@ -63,7 +63,7 @@ class Chat {
     }
     static close_ci = this.close_chat_input
     static chat_input() {
-        return send(`. chat_input`);
+        return send(`. query_ci`);
     }
     static ci = this.chat_input
 }
