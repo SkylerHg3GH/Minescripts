@@ -1,6 +1,6 @@
 const net = require('net');
 
-const ver = 'v1.0.1'
+const ver = 'v1.0.2'
 
 let client = null;
 let queue = [];
@@ -62,6 +62,10 @@ class Chat {
         return send(`. close_chat_input`);
     }
     static close_ci = this.close_chat_input
+    static chat_input() {
+        return send(`. chat_input`);
+    }
+    static ci = this.chat_input
 }
 class Entity {
     static async qall() {
