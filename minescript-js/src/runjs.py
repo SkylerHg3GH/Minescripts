@@ -53,6 +53,9 @@ async def handle_client(reader, writer):
                 # print("QUERY_ARGS:", sys.argv[1:])
                 writer.write(json.dumps(sys.argv[1:]).encode())
                 await writer.drain()
+            if cmd == 'query_ci':
+                writer.write(json.dumps(m.chat_input()).encode())
+                await writer.drain()
             elif cmd == 'player_press_forward':
                 if len(args) > 2:
                     writer.write(b'success')
