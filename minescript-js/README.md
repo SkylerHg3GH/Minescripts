@@ -73,10 +73,8 @@ Sets chat input.
 Closes chat input.
 
 #### `Chat.ci()` / `Chat.chat_input()`
-Reads the chat input
+Reads the chat input,
 Returns: `[text, cursor position]`
-*As of: 1.0.2*
-*Update as of 1.0.2a: fix the command to use query_ci instead of chat_input because chat_input sets the chat input not gets it*
 
 ## Usage
 `\runjs <script name> <args>`
