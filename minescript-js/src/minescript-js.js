@@ -1,5 +1,6 @@
 const net = require('net');
 
+const ver = 'v1.0.1'
 
 let client = null;
 let queue = [];
@@ -139,6 +140,7 @@ module.exports = {
     name,
     argr,
     argv,
+    eval_python_expr,
     Entity,
     Player,
     Chat
