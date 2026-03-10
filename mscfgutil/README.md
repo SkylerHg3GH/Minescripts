@@ -4,7 +4,7 @@ This script is designed to help scripts and users to edit their configs.
 - toml library
 # usage
 You can use this script as a module. <br>
-__COMMMND__ usage: `\mscfgutil <set|read|view>`
+__COMMAND__ usage: `\mscfgutil <set|read|view>`
 # Documentation of functions
 ## `write_to_config(key, new)`
 Write to the config.
